@@ -1,0 +1,138 @@
+/* 🛒 Shopping Cart Container */
+.container {
+    max-width: 1100px;
+    background: #e9f1f7;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-align: left;
+    border: 2px solid #d1e6f3;
+}
+
+h2 {
+    color: #4b6e6d;
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(90deg, #26c6da, #00acc1);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.table {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.table thead tr {
+    background: #26c6da;
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Table Cells */
+.table th,
+.table td {
+    padding: 18px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Table Rows */
+.table tbody tr {
+    background-color: #ffffff;
+    transition: background 0.3s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f6f6;
+}
+
+/* 🛠️ Quantity Controls */
+.btn-secondary {
+    background: #f39c12;
+    border: none;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* ❌ Remove Button */
+.btn-danger {
+    background: #e74c3c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-danger:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+}
+
+/* 🗑️ Clear Cart Button */
+.btn-warning {
+    background: #f39c12;
+    border: none;
+    padding: 16px 24px;
+    font-size: 1.15rem;
+    color: white;
+    border-radius: 15px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.btn-warning:hover {
+    background: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* 💳 Total Price Styling */
+.text-success {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #27ae60 !important;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .table th,
+    .table td {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .btn-secondary,
+    .btn-danger {
+        padding: 6px 14px;
+        font-size: 0.9rem;
+    }
+
+    .btn-warning {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

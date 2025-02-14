@@ -1,0 +1,203 @@
+/* 🌎 Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Light blue gradient */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 📦 Container Styling */
+.container {
+    max-width: 1100px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* 🏷️ Page Title */
+h2 {
+    color: #4caf50; /* Fresh green color */
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 🔥 Product Grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* 📌 Product Card */
+.card {
+    background: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* 🖼️ Product Image */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* 🏷️ Product Title */
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* 📜 Product Description */
+.card-text {
+    font-size: 1rem;
+    color: #757575;
+    height: 60px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+/* 💰 Price Styling */
+.text-success {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #388e3c !important;
+    margin-bottom: 25px;
+}
+
+/* 🛒 Add to Cart Button */
+.btn-primary {
+    background: #388e3c; /* Fresh green for the button */
+    border: none;
+    border-radius: 30px;
+    padding: 16px 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background: #4caf50; /* Lighter green when hovered */
+    transform: scale(1.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+    .row {
+        justify-content: space-around;
+    }
+    .card {
+        width: 45%; /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 850px) {
+    .row {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        width: 90%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    h2 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding: 10px;
+    }
+    .card {
+        width: 100%;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* 📌 Default .col Styling */
+.col {
+    flex: 1;
+    padding: 20px;
+    margin: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🌟 Ensuring Equal Width Distribution */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* 📱 Responsive .col Design */
+@media (max-width: 1024px) {
+    .col {
+        width: 48%; /* Two items per row on tablets */
+    }
+}
+
+@media (max-width: 850px) {
+    .col {
+        width: 90%; /* Full-width on smaller devices */
+        margin: 5px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .col {
+        width: 100%;
+        padding: 15px;
+    }
+}

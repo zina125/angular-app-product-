@@ -1,0 +1,176 @@
+/* Global Styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88); /* Soft pink gradient */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Centered Form Container with Glassmorphism Effect */
+.form-container {
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    margin: auto;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-container:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Form Title */
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    letter-spacing: 1.5px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff8a00, #ff2a68); /* Gradient text */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Labels with Icons */
+.form-label {
+    font-weight: 500;
+    color: #444;
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 30px; /* Space for icons */
+}
+
+/* Font Awesome icons for form labels */
+.form-label[for="name"]::before {
+    content: "\f007"; /* User icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ff8a00;
+}
+
+.form-label[for="email"]::before {
+    content: "\f0e0"; /* Envelope icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ff8a00;
+}
+
+.form-label[for="password"]::before {
+    content: "\f023"; /* Lock icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #ff8a00;
+}
+
+/* Input Fields */
+.form-control {
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Input Focus Effect */
+.form-control:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
+    outline: none;
+}
+
+/* Validation Error Messages */
+.form-text.text-danger {
+    font-size: 14px;
+    color: #dc3545;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: left;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Add warning icons for validation messages */
+.form-text.text-danger::before {
+    content: "\f071"; /* Exclamation-triangle icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: #dc3545;
+}
+
+/* Submit Button */
+.btn-primary {
+    font-size: 18px;
+    padding: 14px;
+    font-weight: bold;
+    border-radius: 25px;
+    width: 100%;
+    background: linear-gradient(135deg, #ff8a00, #ff2a68); /* Gradient background */
+    border: none;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    padding-left: 35px;
+}
+
+/* Add check-circle icon to submit button */
+.btn-primary::before {
+    content: "\f058"; /* Check-circle icon */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #ff2a68, #ff8a00);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .form-container {
+        max-width: 90%;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .form-control {
+        padding: 12px;
+    }
+
+    .btn-primary {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
